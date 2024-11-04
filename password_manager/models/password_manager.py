@@ -74,7 +74,6 @@ class PasswordManager(models.Model):
     def _compute_password(self):
         for rec in self:
             if rec.password_encrypted and not rec.show_password:
-                print('inside if')
                 rec.password_pt = '●' * 8
             elif rec.show_password:
                 rec.password_pt = rec._decrypt_password()
@@ -84,7 +83,6 @@ class PasswordManager(models.Model):
     def action_toggle_visibility(self):
 
         for record in self:
-            print(record.password_pt)
             record.sudo(True).show_password ^= True
 
         return True
