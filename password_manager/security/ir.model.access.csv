@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+password_manager_access,password_manager_access,password_manager.model_password_manager,group_password_manager_user,1,0,0,0
+password_manager_admin_access,password_manager_admin_access,password_manager.model_password_manager,group_password_manager_manager,1,1,1,1
